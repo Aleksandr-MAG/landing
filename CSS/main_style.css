@@ -1,0 +1,245 @@
+/* ----------------- Fonts ----------------- */
+
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+/* ----------------- General settings ----------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: url(../img/cursor/cursor_pen_icon_2.png), auto;
+  transition: 0.1s linear;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 80px;
+  letter-spacing: 7px;
+}
+h2 {
+  color: hsl(0, 0%, 35%);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+h3 {
+  color: hsl(0, 0%, 35%);
+}
+
+html, body {
+  --colir_red: hsl(359, 100%, 55%);
+  --colir_light-red:hsl(359, 100%, 70%);
+  --light-gray: hsl(0, 0%, 60%);
+  width: 100vw;
+  height: 100vh;
+  font-family: Open_Sans, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: hsl(0, 0%, 50%);
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  cursor: url(../img/cursor/cursor_pen_icon_1.png), auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 3px 1px hsla(345, 4%, 19%, 0.2) inset;
+  box-shadow: 0 0 3px 1px hsla(345, 4%, 19%, 0.2) inset;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-background-color: hsl(345, 4%, 19%);
+  background-color: hsl(345, 4%, 19%);
+  -webkit-outline: 10px solid var(--colir_red);
+  outline: 10px solid var(--colir_red);
+}
+
+input::placeholder {
+  color: var(--light-gray);
+}
+textarea::placeholder {
+  color: var(--light-gray);
+}
+
+/* ----------------- oll-box ----------------- */
+.oll_box {
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ----------------- Header ----------------- */
+.header {
+  width: 100vw;
+  height: 150px;
+  padding-top: 2%;
+  position:fixed;
+  z-index: 50;
+}
+
+/* ----------------- Navigation ----------------- */
+.navigation {
+  height: 100%;
+  background: hsl(345, 4%, 19%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navigation_link {
+  width: auto;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation_link:hover {
+  background-color: var(--colir_red);
+}
+.navigation_link:active {
+  background-color: var(--colir_light-red);
+  color: hsl(345, 4%, 19%);
+}
+
+/* ----------------- Main ----------------- */
+.main {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.scroll-button {
+  width: 30px;
+  height: 40px;
+  position: fixed;
+  z-index: 25;
+}
+.scroll-up-button {
+  top: 50vh;
+  right: 0.5vw;
+  transform: rotate(180deg);
+}
+.scroll-down-button {
+  top: 70vh;
+  right: 0.5vw;
+}
+.img-scroll-button {
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* ----------------- Footer ----------------- */
+.footer {
+  width: 100vw;
+  height: 12%;
+  min-height: 100px;
+  background: hsl(345, 4%, 19%);
+}
+
+.footer_content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer_article-1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.footer_article-2 {
+  width: 200px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social_network-twitter {
+background: url(../img/icon/01.png) center no-repeat;
+margin: 0;
+}
+.social_network-twitter:hover {
+  background: url(../img/icon/001.png) center no-repeat;
+}
+.social_network-instagram {
+  background: url(../img/icon/02.png) center no-repeat;
+}
+.social_network-instagram:hover {
+  background: url(../img/icon/002.png) center no-repeat;
+}
+.social_network-google {
+  background: url(../img/icon/03.png) center no-repeat;
+}
+.social_network-google:hover {
+  background: url(../img/icon/003.png) center no-repeat;
+}
+.social_network-facebook {
+  background: url(../img/icon/04.png) center no-repeat;
+}
+.social_network-facebook:hover {
+  background: url(../img/icon/004.png) center no-repeat;
+}
+
+.social_network {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 2px hsl(0, 0%, 100%) solid;
+}
+.social_network:hover {
+  background-size: cover;
+}
+.social_network:active {
+  border: 3px hsl(345, 4%, 19%) solid;
+}
