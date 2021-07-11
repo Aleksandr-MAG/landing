@@ -285,7 +285,7 @@ margin: 0;
     text-align: center;
   }
   .scroll-button {
-    right: 15px;
+    right: 8px;
   }
 }
 @media (max-width : 650px) {
