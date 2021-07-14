@@ -1,0 +1,148 @@
+/* ================= Header ================= */
+.header {
+  width: 100vw;
+  height: 150px;
+  padding-top: 2%;
+  position:fixed;
+  z-index: 50;
+}
+
+/* ================= Navigation ================= */
+.navigation {
+  height: 100%;
+  background: hsl(345, 4%, 19%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.navigation_link {
+  width: auto;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 0 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation_link:hover {
+  background-color: var(--colir_red);
+}
+.navigation_link:active {
+  background-color: var(--colir_light-red);
+  color: hsl(345, 4%, 19%);
+}
+
+/* ================= Burger menu ================= */
+.burger {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  padding: 2px 5px;
+  border: 1px var(--colir_red) solid;
+  border-radius: 7px;
+  background: transparent;
+}
+.burger_line {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: hsl(0, 0%, 100%);
+  position: relative;
+  top: -5px;
+  left: 0;
+}
+.burger_line:before, 
+.burger_line:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 0;
+  transition: 0.3s linear;
+}
+.burger_line:before {
+  top: -5px;
+}
+.burger_line:after {
+  top: 5px;
+}
+
+.burger_checkbox {
+  display: none;
+}
+.burger_menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: -165px;
+  padding-top: 10px;
+}
+.burger_menu li {
+  list-style-type: none;
+}
+li:last-child {
+  margin-bottom: 0;
+  transition: all 0.1s linear;
+}
+
+.burger_menu-list {
+  width: 150px;
+  height: auto;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  font-size: 18px;
+  background: hsl(345, 4%, 19%);
+  border-radius: 5px;
+  display: block;
+  padding: 3px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px var(--colir_red) solid;
+}
+.burger_menu-list:hover {
+  background: var(--colir_red);
+}
+.burger_menu-list:active {
+  color: hsl(345, 4%, 19%);
+  border: 1px hsl(345, 4%, 19%) solid;
+}
+
+.burger_checkbox:checked ~ .burger > .burger_line {
+  background-color: transparent;
+}
+.burger_checkbox:checked ~ .burger > .burger_line:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger_checkbox:checked ~ .burger > .burger_line:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger_checkbox:checked ~ .burger_menu {
+  animation: 0.3s visible_burger 0s linear forwards;
+}
+.burger_checkbox:checked ~ .burger_menu li {
+  animation: 0.2s burger_go 0.3s linear forwards;
+}
+
+@keyframes visible_burger {
+  100% {
+    right: 30px;
+  }
+}
+@keyframes burger_go {
+  100% {
+    margin-bottom: 20px;
+  }
+}
